@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar Hall Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Seminar Hall Booking</h1>
+        <p>Book the perfect space for your next event</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#halls">Our Halls</a>
+        <a href="#booking">Book Now</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h2>Welcome to Our Seminar Hall</h2>
+        <p>Simple, convenient and reliable hall booking
+           for seminars, workshops and college events.</p>
+        <a href="#booking" class="btn">Book a Hall</a>
+    </section>
+
+    <section id="halls">
+        <h2 class="section-title">Available Seminar Halls</h2>
+
+        <div class="hall-container">
+            <div class="hall-card">
+                <h3>Hall A - Mini Hall</h3>
+                <p>Capacity: 50 people</p>
+                <p>Facilities: Projector, Wi-Fi, AC</p>
+                <p class="price">₹1,000 / hour</p>
+            </div>
+
+            <div class="hall-card">
+                <h3>Hall B - Main Hall</h3>
+                <p>Capacity: 150 people</p>
+                <p>Facilities: Sound System, Projector, AC</p>
+                <p class="price">₹2,000 / hour</p>
+            </div>
+
+            <div class="hall-card">
+                <h3>Hall C - Conference Hall</h3>
+                <p>Capacity: 80 people</p>
+                <p>Facilities: Smart Board, Wi-Fi, AC</p>
+                <p class="price">₹1,500 / hour</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2 class="section-title">Book Your Seminar Hall</h2>
+
+        <form class="booking-form"
+              onsubmit="event.preventDefault();
+              alert('Booking request submitted successfully!');">
+
+            <label for="name">Full Name</label>
+            <input type="text" id="name"
+                   placeholder="Enter your name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email"
+                   placeholder="Enter your email" required>
+
+            <label for="hall">Select Hall</label>
+            <select id="hall" required>
+                <option value="">Choose a hall</option>
+                <option>Hall A - Mini Hall</option>
+                <option>Hall B - Main Hall</option>
+                <option>Hall C - Conference Hall</option>
+            </select>
+
+            <label for="date">Booking Date</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Booking Time</label>
+            <input type="time" id="time" required>
+
+            <label for="attendees">Number of Attendees</label>
+            <input type="number" id="attendees"
+                   min="1" placeholder="Enter number of people"
+                   required>
+
+            <label for="purpose">Purpose of Booking</label>
+            <textarea id="purpose" rows="3"
+                      placeholder="Describe your event"
+                      required></textarea>
+
+            <button type="submit">Submit Booking</button>
+        </form>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: seminarbooking@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Seminar Hall Booking System</p>
+        <p>Fundamentals of Full Stack - Mini Project</p>
+    </footer>
+
+</body>
+</html>
